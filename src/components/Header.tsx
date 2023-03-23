@@ -49,7 +49,7 @@ const Header: FC = () => {
           <div>
             <button
               onClick={() => setIsFeedbackOpened(true)}
-              className="border border-gray-500 px-2 py-1 rounded hover:bg-teal-600 hover:border-teal-600 hover:text-white"
+              className="px-2 py-1 bg-teal-600 rounded hover:bg-teal-700 text-white"
             >
               Feedback
             </button>

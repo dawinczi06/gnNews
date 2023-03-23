@@ -19,7 +19,7 @@ const Sidebar: FC = () => {
       <div>Select country:</div>
       <ul className="flex md:flex-col flex-wrap items-center md:items-start md:space-y-4 mt-5">
         {countriesList.map((country) => (
-          <li key={country.code} className="pr-4 pb-1">
+          <li key={country.code} className="pr-4 pb-3">
             <Link
               href={countryRoutes.country.path(country.name)}
               className={cx(
