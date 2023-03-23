@@ -15,7 +15,7 @@ const Sidebar: FC = () => {
   };
 
   return (
-    <aside className="md:w-60 shrink-0 h-full sticky top-10">
+    <aside className="md:w-60 shrink-0 h-full md:sticky top-10">
       <div>Select country:</div>
       <ul className="flex md:flex-col flex-wrap items-center md:items-start md:space-y-4 mt-5">
         {countriesList.map((country) => (

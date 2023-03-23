@@ -20,13 +20,13 @@ module.exports = {
     },
     extend: {
       keyframes: {
-        bounce: {
+        bounceHorizontal: {
           "0%, 100%": { transform: "translateX(-100%)" },
           "50%": { transform: "translateX(0)" },
         },
       },
       animation: {
-        "bounce-animation": "bounce 1s linear infinite",
+        "bounce-animation": "bounceHorizontal 1s linear infinite",
       },
     },
   },

@@ -23,9 +23,9 @@ const Footer: FC = () => {
 
   return (
     <div className="h-12 flex justify-center items-center bg-gray-800 text-gray-50">
-      <div>
+      <p className="text-sm sm:text-base">
         Current time: {currentDate} | Articles quantity: {state}
-      </div>
+      </p>
     </div>
   );
 };

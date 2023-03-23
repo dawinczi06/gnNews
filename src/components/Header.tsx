@@ -16,7 +16,7 @@ const Header: FC = () => {
     <>
       <header className="px-5 bg-gray-100">
         <div className="h-16 max-w-screen-2xl flex justify-between items-center mx-auto">
-          <Link href={"/"} className="text-4xl font-bold">
+          <Link href={"/"} className="text-3xl sm:text-4xl font-bold">
             <span className="text-teal-600">gn</span>
             <span className="text-gray-700">News</span>
           </Link>
@@ -28,7 +28,7 @@ const Header: FC = () => {
             >
               <Squares2X2Icon
                 className={cx(
-                  "w-8 h-8 hover:text-teal-600",
+                  "h-6 w-6 sm:w-8 sm:h-8 hover:text-teal-600",
                   state ? "text-teal-600" : "text-black hover:text-teal-600"
                 )}
               />
@@ -40,7 +40,7 @@ const Header: FC = () => {
             >
               <Bars4Icon
                 className={cx(
-                  "w-8 h-8 hover:text-teal-600",
+                  "h-6 w-6 sm:w-8 sm:h-8 hover:text-teal-600",
                   !state ? "text-teal-600" : "text-black hover:text-teal-600"
                 )}
               />
