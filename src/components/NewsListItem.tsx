@@ -15,7 +15,9 @@ const NewsListItem: FC<Props> = (props) => {
     >
       <h2 className="font-bold">{props.title}</h2>
       <p className="text-sm italic">
-        <span>{format(new Date(props.publishedAt), "dd.MM.yyyy")}</span>
+        <span>
+          {format(new Date(props.publishedAt), "dd.MM.yyyy kk:mm:ss")}
+        </span>
         <span> | {props.source}</span>
       </p>
     </li>

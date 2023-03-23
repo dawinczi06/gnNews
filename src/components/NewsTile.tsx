@@ -24,7 +24,7 @@ const NewsTile: FC<Props> = (props) => {
         <div className="mt-auto italic">
           <p className="text-xs mt-3">Source: {props.source}</p>
           <p className="text-xs">
-            Date: {format(new Date(props.publishedAt), "dd.MM.yyyy")}
+            Date: {format(new Date(props.publishedAt), "dd.MM.yyyy kk:mm:ss")}
           </p>
         </div>
       </div>
