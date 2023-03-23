@@ -5,7 +5,7 @@ function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Create Next App</title>
+        <title>gnNews</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

@@ -15,11 +15,11 @@ const Sidebar: FC = () => {
   };
 
   return (
-    <aside className="w-60 shrink-0 h-full">
+    <aside className="md:w-60 shrink-0 h-full sticky top-10">
       <div>Select country:</div>
-      <ul className="space-y-4 mt-5">
+      <ul className="flex md:flex-col flex-wrap items-center md:items-start md:space-y-4 mt-5">
         {countriesList.map((country) => (
-          <li key={country.code}>
+          <li key={country.code} className="pr-4 pb-1">
             <Link
               href={countryRoutes.country.path(country.name)}
               className={cx(

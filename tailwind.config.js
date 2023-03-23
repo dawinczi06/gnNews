@@ -18,7 +18,17 @@ module.exports = {
       gray: colors.gray,
       teal: colors.teal,
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        bounce: {
+          "0%, 100%": { transform: "translateX(-100%)" },
+          "50%": { transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        "bounce-animation": "bounce 1s linear infinite",
+      },
+    },
   },
   plugins: [],
 };
