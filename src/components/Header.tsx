@@ -14,7 +14,7 @@ const Header: FC = () => {
 
   return (
     <>
-      <header className="px-5 bg-gray-100">
+      <header className="sticky top-0 w-full z-50 px-5 bg-gray-100">
         <div className="h-16 max-w-screen-2xl flex justify-between items-center mx-auto">
           <Link href={"/"} className="text-3xl sm:text-4xl font-bold">
             <span className="text-teal-600">gn</span>

@@ -10,6 +10,8 @@ import NewsModal from "../../components/NewsModal";
 import { useDispatch, useSelector } from "react-redux";
 import { newsCountUpdate, RootState } from "../../store";
 import NewsListItem from "../../components/NewsListItem";
+import { ArrowUpIcon } from "@heroicons/react/24/solid";
+import useIseMobile from "../../hooks/isMobile";
 
 const CountryPage: NextPage = () => {
   const router = useRouter();
@@ -20,6 +22,8 @@ const CountryPage: NextPage = () => {
   const [isModalOpened, setIsModalOpened] = useState<NewsDto | undefined>(
     undefined
   );
+
+  const isMobile = useIseMobile(768);
 
   const state = useSelector((state: RootState) => state.isNewsGrid);
   const dispatch = useDispatch();
@@ -45,7 +49,7 @@ const CountryPage: NextPage = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row flex-1 max-w-screen-2xl mx-auto h-full w-full py-10">
+      <div className="flex flex-col md:flex-row flex-1 max-w-screen-2xl mx-auto h-full w-full py-5 md:py-10">
         <Sidebar />
         <div className="flex flex-col flex-1 h-full mt-5 md:mt-0">
           {data ? (
@@ -97,6 +101,14 @@ const CountryPage: NextPage = () => {
           )}
         </div>
       </div>
+      {isMobile && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed max-w-max bottom-5 right-5 bg-teal-600 shadow-lg hover:shadow-xl hover:scale-105 hover:bg-teal-700 rounded-full p-3"
+        >
+          <ArrowUpIcon className="w-5 h-5 text-white" />
+        </button>
+      )}
       {isModalOpened && (
         <Modal>
           <NewsModal data={isModalOpened} setIsModalOpened={setIsModalOpened} />
